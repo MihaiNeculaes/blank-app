@@ -15,14 +15,12 @@ This calculator estimates the **SPICE index (Single Point Insulin Sensitivity Es
 - BMI (kg/m²)
 
 ---
-
 ### 🧮 Formula:
-
-\\[
-\\text{SPICE} = \\frac{600 \\times (\\text{HDL})^{0.185}}{(\\text{Triglycerides})^{0.2} \\times (\\text{BMI})^{1.338}}
-\\]
-
 All units must be in **mg/dL** for lipids and **kg/m²** for BMI.
+""")
+
+st.latex(r"""
+\text{SPICE} = \frac{600 \times (\text{HDL})^{0.185}}{(\text{Triglycerides})^{0.2} \times (\text{BMI})^{1.338}}
 """)
 
 hdl = st.number_input("Enter HDL cholesterol (mg/dL)", min_value=0.0, step=0.00001, format="%.5f")
