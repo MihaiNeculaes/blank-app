@@ -8,10 +8,21 @@ def calculate_spice(hdl, triglycerides, bmi):
 st.title("SPICE Index Calculator")
 
 st.markdown("""
-This calculator estimates the **SPICE index (Single Point Insulin Sensitivity Estimator)** based on your:
+This calculator estimates the **SPICE index (Single Point Insulin Sensitivity Estimator)** based on:
+
 - HDL cholesterol (mg/dL)
 - Triglycerides (mg/dL)
 - BMI (kg/m²)
+
+---
+
+### 🧮 Formula:
+
+\\[
+\\text{SPICE} = \\frac{600 \\times (\\text{HDL})^{0.185}}{(\\text{Triglycerides})^{0.2} \\times (\\text{BMI})^{1.338}}
+\\]
+
+All units must be in **mg/dL** for lipids and **kg/m²** for BMI.
 """)
 
 hdl = st.number_input("Enter HDL cholesterol (mg/dL)", min_value=0.0, step=0.00001, format="%.5f")
